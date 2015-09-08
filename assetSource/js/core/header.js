@@ -1,5 +1,8 @@
 $(function() {
-    $(window).on("scroll", function () {
+    /**
+     * Add "pipnav" class to header when scrolled passt 500px
+     */
+    $(window).on("scroll", function() {
         var self = $(this);
         if (self.scrollTop() > 500) {
             $("header").addClass("pipnav");
@@ -8,6 +11,9 @@ $(function() {
         }
     });
 
+    /**
+     * Handle the down navigation
+     */
     $(".down-link").on("click", function() {
         var curr = $("section.current").next();
         if (curr.length === 0) {
