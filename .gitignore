@@ -7,3 +7,5 @@ assetSource/bower_components/
 assetSource/node_modules/
 assetSource/.sass-cache/
 app/Template/Cache/
+public/css/
+public/js/
