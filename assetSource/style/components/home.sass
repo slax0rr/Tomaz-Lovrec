@@ -90,20 +90,26 @@
                 font-size: 28px
 
 section h1.duplicated-heading
-    height: 120px
-    padding: 0px 5%
+    height: 30px
+    width: 100%
+    padding: 0
     position: fixed
-    top: 0px
+    top: 90px
     right: 0px
-    line-height: 120px
+    font-size: 0.5em
+    line-height: 30px
     z-index: 1000
-    font-size: 1em
     opacity: 0
     transition: 0.3s all cubic-bezier(0.48, 0.04, 0.21, 0.94)
+    text-align: center
 
     &.show
         opacity: 1
 
     @include breakpoint($tablet-size)
+        width: auto
+        top: 0px
+        padding: 0px 5%
         height: 80px
         line-height: 80px
+        font-size: 1em
