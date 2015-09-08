@@ -15,13 +15,10 @@ $(function() {
      * Handle the down navigation
      */
     $(".down-link").on("click", function() {
-        var curr = $("section.current").next();
+        var curr = $("section.current").next("section");
         if (curr.length === 0) {
             curr = $("section").first();
         }
-
-        $("section").removeClass("current");
-        curr.addClass("current");
 
         $('html, body').animate({
             scrollTop: curr.offset().top - 80
