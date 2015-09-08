@@ -62,7 +62,7 @@ module.exports = function(grunt){
         uglify: {
             build: {
                 files: {
-                    '../public/all.min.js': ['../public/all.js']
+                    '../public/js/all.min.js': ['../public/js/all.js']
                 }
             }
         },
@@ -97,7 +97,7 @@ module.exports = function(grunt){
                     style: "compressed",
                 },
                 files: [{
-                    src: ["./styles/style.scss"],
+                    src: ["./style/style.sass"],
                     dest: "../public/css/style.css",
                     ext: ".css"
                 }]
