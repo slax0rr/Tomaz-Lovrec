@@ -19,18 +19,7 @@ $(function() {
         var scroll = $(this).scrollTop() + 80;
 
         if (scroll <= previousPos) {
-            $("section").removeClass("current");
-            $("." + sections[previousIndex].class).addClass("current");
-            nextPos = previousPos;
-            nextIndex = previousIndex;
-            if (typeof sections[previousIndex - 1] !== "undefined") {
-                previousIndex--;
-                previousPos = parseInt(sections[previousIndex].pos);
-                $(".down-link i").html("keyboard_arrow_down");
-            } else {
-                previousPos = 0;
-                $(".down-link i").html("keyboard_arrow_down");
-            }
+            markPrev();
         } else if (scroll >= nextPos) {
             markNext();
         } else if (scroll - 80 + $(window).height() === $(document).height()) {
@@ -39,6 +28,22 @@ $(function() {
             $("section").removeClass("current");
         }
     });
+
+    var markPrev = function()
+    {
+        $("section").removeClass("current");
+        $("." + sections[previousIndex].class).addClass("current");
+        nextPos = previousPos;
+        nextIndex = previousIndex;
+        if (typeof sections[previousIndex - 1] !== "undefined") {
+            previousIndex--;
+            previousPos = parseInt(sections[previousIndex].pos);
+            $(".down-link i").html("keyboard_arrow_down");
+        } else {
+            previousPos = 0;
+            $(".down-link i").html("keyboard_arrow_down");
+        }
+    }
 
     var markNext = function()
     {
