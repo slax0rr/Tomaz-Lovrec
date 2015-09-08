@@ -26,24 +26,32 @@ $(function() {
             if (typeof sections[previousIndex - 1] !== "undefined") {
                 previousIndex--;
                 previousPos = parseInt(sections[previousIndex].pos);
+                $(".down-link i").html("keyboard_arrow_down");
             } else {
                 previousPos = 0;
                 $(".down-link i").html("keyboard_arrow_down");
             }
         } else if (scroll >= nextPos) {
-            $("section").removeClass("current");
-            $("." + sections[nextIndex].class).addClass("current");
-            previousPos = nextPos;
-            previousIndex = nextIndex;
-            if (typeof sections[nextIndex + 1] !== "undefined") {
-                nextIndex++;
-                nextPos = parseInt(sections[nextIndex].pos);
-            } else {
-                nextPos = $(document).innerHeight();
-                $(".down-link i").html("keyboard_arrow_up");
-            }
+            markNext();
+        } else if (scroll - 80 + $(window).height() === $(document).height()) {
+            markNext();
         } else if (scroll <= nextPos && previousPos === 0) {
             $("section").removeClass("current");
         }
     });
+
+    var markNext = function()
+    {
+        $("section").removeClass("current");
+        $("." + sections[nextIndex].class).addClass("current");
+        previousPos = nextPos;
+        previousIndex = nextIndex;
+        if (typeof sections[nextIndex + 1] !== "undefined") {
+            nextIndex++;
+            nextPos = parseInt(sections[nextIndex].pos);
+        } else {
+            nextPos = $(document).innerHeight();
+            $(".down-link i").html("keyboard_arrow_up");
+        }
+    }
 });
