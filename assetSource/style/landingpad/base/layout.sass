@@ -1,0 +1,40 @@
+body
+    margin: 0
+    padding: 0
+
+    background-color: #000
+    color: $main-color
+
+    font-family: 'VT323'
+    font-size: 20px
+
+.title
+    color: #fff
+
+.parameter
+    color: #ff0
+
+.content
+    margin: 0 auto
+
+    width: 100%
+
+    @include breakpoint($tablet-size)
+        width: 768px
+
+.check-list
+    width: 100%
+
+    .check-line .check-ok
+        float: right
+
+        color: #0f0
+
+        &.ok
+            &:before
+                color: $main-color
+                content: '['
+
+            &:after
+                color: $main-color
+                content: ']'

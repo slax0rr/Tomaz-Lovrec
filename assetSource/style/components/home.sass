@@ -1,0 +1,82 @@
+.event-about
+    .image
+        margin-bottom: 20px
+
+        .le-me
+            width: 140px
+            border-radius: 50%
+
+.event-skills
+    & > h1
+        background-color: #e53935
+
+    h3
+        background-color: rgba(0, 0, 0, 0.54)
+        color: #fff
+
+        .cpp
+            background-color: #1976d2
+            width: 73%
+
+        .cs
+            background-color: #689f38
+            width: 69%
+
+        .php
+            background-color: #3949ab
+            width: 86%
+
+        .sql
+            background-color: #424242
+            width: 77%
+
+        .py
+            background-color: #795548
+            width: 30%
+
+        .js
+            background-color: #ff5722
+            width: 80%
+
+        .css
+            background-color: #cddc39
+            width: 75%
+
+        .html
+            background-color: #ef5350
+            width: 85%
+
+.event-experience, .event-education
+    & > h1
+        background-color: #3949ab
+
+    h2
+        font-size: 0.8em
+
+    h3
+        display: inline-block
+        font-size: 0.6em
+        color: #1976d2
+
+.event-education
+    & > h1
+        background-color: #689f38
+
+    h3
+        color: #afb42b
+
+.event-contact
+    & > h1
+        background-color: #ff5722
+
+    .accs
+        display: flex
+        flex-wrap: wrap
+
+        .item
+            margin-right: 10px
+            font-size: 20px
+
+            @include breakpoint($tablet-size)
+                margin: auto
+                font-size: 28px

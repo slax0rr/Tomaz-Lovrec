@@ -1,0 +1,100 @@
+body
+    color: #37474f
+    font: 28px/1.6 "Roboto", sans-serif
+    font-weight: 200
+    -webkit-font-smoothing: antialiased
+    font-size: 32px
+    overflow-x: hidden
+
+    h1, h2
+        position: relative
+        padding: 0
+        margin: 0
+
+    h1
+        font-size: 1.6em
+        font-weight: 100
+        line-height: 1.2
+        margin-bottom: 0.2em
+
+        @include breakpoint($tablet-size)
+            font-size: 1.7em
+
+        @include breakpoint($desktop-size)
+            font-size: 1.8em
+
+    h2
+        font-weight: 600
+        text-transform: uppercase
+        margin-bottom: 0.4em
+        font-size: 1.3em
+
+section
+    h1
+        font-size: 1.6em
+        height: 140px
+        line-height: 140px
+        color: #fff
+        margin-bottom: 0
+        padding-left: 5%
+
+        @include breakpoint($tablet-size)
+            padding-left: 10%
+
+    h3
+        font-size: 1em
+        height: 60px
+        line-height: 60px
+        margin: 0
+        font-weight: bold
+
+        span
+            display: block
+            padding-left: 5%
+
+            @include breakpoint($tablet-size)
+                padding-left: 10%
+
+.content-wrapper
+    padding: 80px 0
+    max-width: 970px
+    margin-left: 10%
+
+    h1
+        width: 100%
+        height: 100%
+        transition: 0.75s all cubic-bezier(0.48, 0.04, 0.21, 0.94)
+
+.nav-title
+    pointer-events: none
+    visibility: hidden
+    opacity: 0
+    position: absolute
+    bottom: 30px
+    left: 5%
+    right: 0
+    height: 60px
+    transition: 0.3s all cubic-bezier(0.48, 0.04, 0.21, 0.94)
+    transform: translate3d(0, -40px, 0)
+
+    @include breakpoint($tablet-size)
+        height: 40px
+        bottom: 10px
+        left: calc(10% + 110px)
+        text-align: left
+
+.logo
+    color: transparent
+    text-shadow: none
+    background-image: url("/img/logo.png")
+    background-repeat: no-repeat
+    background-position: left center
+    background-size: contain
+
+a
+    color: #37474f
+    text-decoration: none
+    transition: 0.3s all cubic-bezier(0.48, 0.04, 0.21, 0.94)
+
+    &:hover
+        color: #9e9e9e
