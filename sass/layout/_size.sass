@@ -1,14 +1,25 @@
 .fontsize
   &.large
-    font-size: 40px
-    line-height: 50px
+    font-size: 30px
+    line-height: 40px
+
+    @include tablet
+      font-size: 40px
+      line-height: 50px
 
   &.medium
-    font-size: 24px
-    line-height: 36px
+    font-size: 20px
+    line-height: 28px
+
+    @include tablet
+      font-size: 24px
+      line-height: 36px
 
   &.normal
-    font-size: 18px
+    font-size: 14px
+
+    @include tablet
+      font-size: 18px
 
   &.small
     font-size: 14px
