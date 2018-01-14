@@ -1,5 +1,5 @@
 .grid
-  margin: 0 20px
+  margin: 0 5px
 
   .row
     display: block
@@ -7,17 +7,12 @@
     @include tablet
       display: flex
       flex-direction: row
-      flex-wrap: nowrap
+      flex-wrap: wrap
       justify-content: space-between
 
     .col
-      flex-basis: 100%
-      padding: 15px
       margin: 5px 0
 
       &.xs-12
         width: 100%
-
-      @include tablet
-        flex: 1
 
