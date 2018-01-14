@@ -8,10 +8,20 @@
     width: 50%
 
   .code
+    display: none
+    background-size: contain
+    background-image: url('../img/code.jpg')
+    width: 426px
+    height: 310px
     position: absolute
     bottom: 0
-    right: 0
-    width: 852px
-    height: 620px
-    background-size: 100% auto
-    background-image: url('../img/code.jpg')
+    z-index: -1
+
+    @include tablet
+      display: block
+      right: -90px
+
+    @include desktop
+      width: 852px
+      height: 620px
+      right: -320px
