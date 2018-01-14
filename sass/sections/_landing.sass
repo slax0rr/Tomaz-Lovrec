@@ -4,22 +4,28 @@
   position: relative
   overflow: hidden
 
+  @include tablet
+    height: 100vh
+
   p
-    width: 50%
+    width: 100%
+
+    @include tablet
+      width: 50%
 
   .code
     display: none
-    background-size: contain
-    background-image: url('../img/code.jpg')
-    width: 426px
-    height: 310px
-    position: absolute
-    bottom: 0
-    z-index: -1
 
     @include tablet
       display: block
+      background-size: contain
+      background-image: url('../img/code.jpg')
+      width: 426px
+      height: 310px
+      position: absolute
+      bottom: 0
       right: -90px
+      z-index: -1
 
     @include desktop
       width: 852px

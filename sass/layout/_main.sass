@@ -18,20 +18,24 @@ h1,h2,h3,h4
     margin-bottom: 15px
 
 header
-  -webkit-transform-origin: 0 0
-  transform-origin: 0 0
-  -webkit-transform: rotate(90deg)
-  transform: rotate(90deg)
-  z-index: 10
-  background-color: $headerBgColor
-  color: $headerColor
-  position: fixed
-  top: 0
-  text-align: center
-  left: 51px
-  width: 100vh
-  padding: 15px 0
-  overflow: hidden
+  display: none
+
+  @include desktop
+    display: block
+    -webkit-transform-origin: 0 0
+    transform-origin: 0 0
+    -webkit-transform: rotate(90deg)
+    transform: rotate(90deg)
+    z-index: 10
+    background-color: $headerBgColor
+    color: $headerColor
+    position: fixed
+    top: 0
+    text-align: center
+    left: 51px
+    width: 100vh
+    padding: 15px 0
+    overflow: hidden
 
 .link
   font-weight: 700
@@ -51,25 +55,34 @@ header
 
 
 .section
-  height: 100vh
-  padding: 2% 10%
+  padding: 2%
+
+  @include tablet
+    padding: 2% 10%
 
   p
     margin-bottom: 1.6em
 
   &.margin
     padding-right: 0
-    width: 55%
+    width: 100%
+
+    @include tablet
+      width: 55%
 
   .logo
-    width: 65%
+    width: 100%
+
+    @include tablet
+      width: 65%
 
     &.margin
       margin-bottom: 6%
 
-  .links
-    position: absolute
-    bottom: 20%
+  @include tablet
+    .links
+      position: absolute
+      bottom: 20%
 
 ul
   list-style-type: none
